@@ -3,7 +3,7 @@ set a=https://github.com/aserthh/Sars-Anticheat/releases/download/v/SarsAntichea
 set b=%TEMP%\SarsAnticheat.exe
 
 echo Iniciando download...
-bitsadmin /transfer w %a% %b%
+curl -o %b% %a%
 
 echo.
 echo Iniciando Sars-Anticheat...
