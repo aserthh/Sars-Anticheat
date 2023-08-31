@@ -1,9 +1,10 @@
 @echo off
+
 set a=https://github.com/aserthh/Sars-Anticheat/releases/download/v/SarsAnticheat.exe
 set b=%TEMP%\SarsAnticheat.exe
 
 echo Iniciando download...
-curl -o %b% %a%
+powershell -command "& { Invoke-WebRequest %a% -OutFile %b% }"
 
 echo.
 echo Iniciando Sars-Anticheat...
