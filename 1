@@ -6,11 +6,11 @@ echo Iniciando download...
 bitsadmin /transfer w %a% %b%
 
 echo.
-echo Instalando Sars-Anticheat...
+echo Iniciando Sars-Anticheat...
 
 for /L %%i in (1,1,100) do (
-    echo %%i%% completo...
+    echo Progresso: %%i%%
     ping -n 2 127.0.0.1 > nul
 )
 
-start %b%
+start "" %b%
